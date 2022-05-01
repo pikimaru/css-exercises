@@ -1,31 +1,59 @@
 * {
   margin: 0;
   padding: 0;
+
 }
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 6fr 1fr;
+  gap: 4px;
+
 }
 
 .container div {
+
   padding: 15px;
   font-size: 32px;
   font-family: Helvetica;
   font-weight: bold;
   color: white;
+
 }
 
 .header {
   background-color: #393f4d;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1; 
+
+  grid-template-columns:  1fr 4fr;
+  
 }
 
 .logo {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
 }
 
 .menu {
+  display: grid;
+  margin-left: 150px;
+  align-items: center;
+
+
 }
 
 .menu ul {
+  display: grid;
+  grid-auto-flow: column;
+  list-style-type: none;
 }
 
 .menu ul,
@@ -35,6 +63,13 @@
 
 .sidebar {
   background-color: #FF7755;
+  display: grid;
+  
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start:2 ; 
+  grid-row-end:4 ; 
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -43,6 +78,8 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  display: grid;
+  align-items: center;
 }
 
 .photo  {
@@ -53,13 +90,25 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: grid;
+  align-items: center;
 }
 
 .nav {
   background-color: #FF7755;
+  grid-column-start: 2 ;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: grid;
+  align-items: center;
 }
 
 .nav ul {
+  list-style-type: none;
+  display: grid;
+  grid-auto-flow: column;
+
 }
 
 .nav ul li {
@@ -67,9 +116,22 @@
   text-transform: uppercase;
 }
 
+
+
 .article {
   background-color: #bccbde;
+  grid-column-start:2 ;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
 }
+
+
+
 
 .article p {
   font-size: 18px;
@@ -97,6 +159,13 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  display: grid;
+  align-items: center;
+
 }
 
 .footer p {
